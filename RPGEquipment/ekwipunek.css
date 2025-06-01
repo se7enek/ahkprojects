@@ -1,0 +1,558 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body
+{
+    background: #332f2c;
+  
+    color: #dddddd;
+    font-family: Arial;
+}
+
+/* Itemy: http://i.imgur.com/ngGK5MF.png
+ * Gui: http://i.imgur.com/nOqKSbE.png
+*/
+
+a, a:link, a:visited { 
+  color: #c00;
+  text-decoration: none;
+  
+  -webkit-transition: all 0.3s ease;  
+  transition: all 0.3s ease;
+}
+a:hover { 
+  color: #ff5c19;
+  text-decoration: underline;
+}  
+a:active { 
+  color: #6aff19;
+}
+input[type="range"]
+{
+    width: 400px;
+}
+
+.inventory-table
+{
+
+}
+
+.inventory-row
+{
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start; /* align items in Main Axis */
+	align-items: flex-start; /* align items in Cross Axis */
+	align-content: flex-start; /* Extra space in Cross Axis */
+}
+
+
+.inventory-cell
+{
+    width: 36px;
+    height: 36px;
+    
+    flex-shrink: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* align items in Main Axis */
+    align-items: center; /* align items in Cross Axis */
+    align-content: center; /* Extra space in Cross Axis */
+    
+    /*background-image: url('http://i.imgur.com/nOqKSbE.png');*/
+	background-image: url('gui.png');
+    background-position: -229px -331px;
+}
+
+/* left */
+.inventory-cell:first-child
+{
+    width: 38px;
+    padding-left: 2px;
+    
+    background-position: -190px -331px;
+}
+
+/* right */
+.inventory-cell:last-child
+{
+    width: 38px;
+    padding-right: 2px;
+    
+    background-position: -266px -331px;
+}
+    
+
+/* top ROW */
+.inventory-row:first-child .inventory-cell
+{
+    height: 38px;
+    padding-top: 2px;
+    
+    background-position: -229px -292px;
+}
+
+/* bottom ROW */
+.inventory-row:last-child .inventory-cell
+{
+    height: 38px;
+    padding-bottom: 2px;
+    
+    background-position: -229px -368px;
+}
+
+/* top left */
+.inventory-row:first-child .inventory-cell:first-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -190px -292px;
+}
+
+/* top right */
+.inventory-row:first-child .inventory-cell:last-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -266px -292px;
+}
+
+/* bottom left */
+.inventory-row:last-child .inventory-cell:first-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -190px -368px;
+}
+
+/* bottom right */
+.inventory-row:last-child .inventory-cell:last-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -266px -368px;
+}
+
+
+/* single horizontal */
+.inventory-row:only-child .inventory-cell
+{
+    height: 40px;
+    
+    background-position: -613px -286px;
+}
+/* single horizontal left */
+.inventory-row:only-child .inventory-cell:first-child
+{
+    width: 38px;
+    height: 40px;
+    
+    background-position: -574px -286px;
+}
+/* single horizontal right */
+.inventory-row:only-child .inventory-cell:last-child
+{
+    width: 38px;
+    height: 40px;
+    
+    background-position: -650px -286px;
+}
+
+/* single vertical */
+.inventory-row .inventory-cell:only-child
+{
+    width: 40px;
+    
+    background-position: -563px -463px;
+}
+/* single vertical top */
+.inventory-row:first-child .inventory-cell:only-child
+{
+    width: 40px;
+    height: 38px;
+    
+    background-position: -563px -424px;
+}
+/* single vertical bottom */
+.inventory-row:last-child .inventory-cell:only-child
+{
+    width: 40px;
+    height: 38px;
+    
+    background-position: -563px -500px;
+}
+
+/* single by singel */
+.inventory-row:only-child .inventory-cell:only-child
+{
+    width: 40px;
+    height: 40px;
+    
+    background-position: -30px -288px;
+}
+
+/*==========================================================*/
+
+.inventory-cell-locked
+{
+    width: 36px;
+    height: 36px;
+    
+    flex-shrink: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* align items in Main Axis */
+    align-items: center; /* align items in Cross Axis */
+    align-content: center; /* Extra space in Cross Axis */
+    
+    /*background-image: url('http://i.imgur.com/nOqKSbE.png');*/
+	background-image: url('gui.png');
+    background-position: -481px -331px;
+}
+
+/* left */
+.inventory-cell-locked:first-child
+{
+    width: 38px;
+    padding-left: 2px;
+    
+    background-position: -442px -331px;
+}
+
+/* right */
+.inventory-cell-locked:last-child
+{
+    width: 38px;
+    padding-right: 2px;
+    
+    background-position: -518px -331px;
+}
+    
+
+/* top ROW */
+.inventory-row:first-child .inventory-cell-locked
+{
+    height: 38px;
+    padding-top: 2px;
+    
+    background-position: -481px -292px;
+}
+
+/* bottom ROW */
+.inventory-row:last-child .inventory-cell-locked
+{
+    height: 38px;
+    padding-bottom: 2px;
+    
+    background-position: -481px -368px;
+}
+
+/* top left */
+.inventory-row:first-child .inventory-cell-locked:first-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -442px -292px;
+}
+
+/* top right */
+.inventory-row:first-child .inventory-cell-locked:last-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -518px -292px;
+}
+
+/* bottom left */
+.inventory-row:last-child .inventory-cell-locked:first-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -442px -368px;
+}
+
+/* bottom right */
+.inventory-row:last-child .inventory-cell-locked:last-child
+{
+    width: 38px;
+    height: 38px;
+    
+    background-position: -518px -368px;
+}
+
+
+/* single horizontal */
+.inventory-row:only-child .inventory-cell-locked
+{
+    height: 40px;
+    
+    background-position: -865px -286px;
+}
+/* single horizontal left */
+.inventory-row:only-child .inventory-cell-locked:first-child
+{
+    width: 38px;
+    height: 40px;
+    
+    background-position: -826px -286px;
+}
+/* single horizontal right */
+.inventory-row:only-child .inventory-cell-locked:last-child
+{
+    width: 38px;
+    height: 40px;
+    
+    background-position: -902px -286px;
+}
+
+/* single vertical */
+.inventory-row .inventory-cell-locked:only-child
+{
+    width: 40px;
+    
+    background-position: -815px -463px;
+}
+/* single vertical top */
+.inventory-row:first-child .inventory-cell-locked:only-child
+{
+    width: 40px;
+    height: 38px;
+    
+    background-position: -815px -424px;
+}
+/* single vertical bottom */
+.inventory-row:last-child .inventory-cell-locked:only-child
+{
+    width: 40px;
+    height: 38px;
+    
+    background-position: -815px -500px;
+}
+
+/* single by singel */
+.inventory-row:only-child .inventory-cell-locked:only-child
+{
+    width: 40px;
+    height: 40px;
+    
+    background-position: -282px -288px;
+}
+
+
+
+/* ITEMS */
+
+.inventory-item
+{
+    width: 34px;
+    height: 34px;
+    background-image: url('https://i.imgur.com/ngGK5MF.png');
+    background-repeat: no-repeat;
+    
+    cursor: hand;
+    cursor: pointer;
+    
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.inventory-item-sortable-placeholder
+{
+    display: none;
+}
+
+.inventory-item.ui-sortable-helper, .inventory-item.ui-draggable-dragging
+{
+    opacity: .6;
+}
+.inventory-item.grape
+{
+    background-position: 0px 0px;
+}
+
+.inventory-item.sword-elec
+{
+    background-position: 0px -952px;
+}
+.inventory-item.sword-water
+{
+    background-position: -68px -952px;
+}
+.inventory-item.sword-ice
+{
+    background-position: -102px -952px;
+}
+.inventory-item.sword-fire
+{
+    background-position: -34px -952px;
+}
+.inventory-item.gloves-leather
+{
+    background-position: -238px -476px;
+}
+.inventory-item.aura-strenght
+{
+    background-position: 0px -884px;
+}
+.inventory-item.aura-punch
+{
+    background-position: -34px -884px;
+}
+.inventory-item.aura-cold
+{
+    background-position: -68px -884px;
+}
+.inventory-item.aura-speed
+{
+    background-position: -102px -884px;
+}
+.inventory-item.aura-stone
+{
+    background-position: -136px -884px;
+}
+.inventory-item.aura-devil
+{
+    background-position: -442px -884px;
+}
+
+.inventory-item.talizman-fire
+{
+    background-position: 0px -680px;
+}
+.inventory-item.talizman-ghost
+{
+    background-position: 0px -714px;
+}
+.inventory-item.talizman-wind
+{
+    background-position: 0px -748px;
+}
+.inventory-item.talizman-elec
+{
+    background-position: 0px -782px;
+}
+.inventory-item.talizman-earth
+{
+    background-position: -238px -680px;
+}
+.inventory-item.talizman-water
+{
+    background-position: -238px -714px;
+}
+.inventory-item.talizman-health
+{
+    background-position: -238px -748px;
+}
+.inventory-item.talizman-ice
+{
+    background-position: -238px -782px;
+}
+
+.inventory-item.stone-diamond
+{
+    background-position: 0px -510px;
+}
+.inventory-item.stone-ruby
+{
+    background-position: -34px -510px;
+}
+.inventory-item.stone-sapphire
+{
+    background-position: -68px -510px;
+}
+.inventory-item.stone-agate
+{
+    background-position: -102px -510px;
+}
+.inventory-item.stone-fuse
+{
+    background-position: -136px -510px;
+}
+.inventory-item.stone-emerald
+{
+    background-position: -170px -510px;
+}
+.inventory-item.stone-XXX
+{
+    background-position: -204px -510px;
+}
+
+.inventory-item.shield
+{
+    background-position: 0px -408px;
+}
+
+.inventory-item.box
+{
+    background-position: -238px -986px;
+}
+.inventory-item.gloves
+{
+    background-position: -306px -476px;
+}
+.inventory-item.amulet
+{
+    background-position: -238px -646px;
+}
+.inventory-item.book
+{
+    background-position: -34px -986px;
+}
+.inventory-item.key
+{
+    background-position: -238px -544px;
+}
+.inventory-item.armor
+{
+    background-position: -204px -442px;
+}
+.inventory-item.helm
+{
+    background-position: -408px -440px;
+}
+.inventory-item.boots
+{
+    background-position: -204px -476px;
+}
+.inventory-item.carrot
+{
+    background-position: -34px -34px;
+}
+.inventory-item.sword
+{
+    background-position: 0px -170px;
+}
+
+.inventory-item.axe
+{
+    background-position: -170px -340px;
+}
+.inventory-item.axe-fire
+{
+    background-position: -306px -340px;
+}
+.inventory-item.bow-fire
+{
+    background-position: -238px -374px;
+}
+.inventory-item.meat
+{
+    background-position: -374px -34px;
+}
+.inventory-item.meat-cooked
+{
+    background-position: -442px -34px;
+}
