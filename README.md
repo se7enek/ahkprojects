@@ -1,2 +1,2 @@
 # ahkprojects
-Collection of Scripts for personal use
+Collection of Scripts made for personal use
