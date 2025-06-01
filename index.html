@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ekwipunek</title>
+  <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.js'></script>
+  <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css">
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="ekwipunek.css">
+  <script type='text/javascript' src="ekwipunek.js"></script>
+</head>
+<body>
+<table>
+<tr><td>
+Ekwipunek:
+<div class="inventory-table" id="personal-inventory">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item book" data-item-type="book"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item sword" data-item-type="weapon sword"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item stone-diamond" data-item-type="stone"></div>
+        </div>
+		<div class="inventory-cell">
+            <div class="inventory-item stone-ruby" data-item-type="stone"></div>
+        </div>
+		<div class="inventory-cell">
+            <div class="inventory-item stone-sapphire" data-item-type="stone"></div>
+        </div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell">
+			<div class="inventory-item box" data-item-type="box"></div>
+        </div>
+        <div class="inventory-cell">
+			<div class="inventory-item key" data-item-type="key"></div>
+        </div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item gloves" data-item-type="gloves"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item amulet" data-item-type="amulet"></div>
+        </div>
+        
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell">
+            <div class="inventory-item stone-fuse" data-item-type="stone"></div>
+        </div>
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item axe" data-item-type="weapon axe"></div>    
+        </div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell">
+            <div class="inventory-item stone-agate" data-item-type="stone"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item stone-emerald" data-item-type="stone"></div>
+        </div>
+		<div class="inventory-cell">
+            <div class="inventory-item stone-XXX" data-item-type="stone"></div>
+        </div>
+		<div class="inventory-cell">
+			<div class="inventory-item sword-elec" data-item-type="weapon sword enchanted"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item sword-water" data-item-type="weapon sword enchanted"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item sword-ice" data-item-type="weapon sword enchanted"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item gloves-leather" data-item-type="gloves"></div>
+		</div>
+    </div>
+	<div class="inventory-row">
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-fire" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-ghost" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-wind" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-elec" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-earth" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-water" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-health" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item talizman-ice" data-item-type="talizman"></div>
+		</div>
+		<div class="inventory-cell"></div>
+	</div>
+	<div class="inventory-row">
+		<div class="inventory-cell">
+			<div class="inventory-item aura-strenght" data-item-type="aura"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item aura-punch" data-item-type="aura"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item aura-cold" data-item-type="aura"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item aura-speed" data-item-type="aura"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item aura-stone" data-item-type="aura"></div>
+		</div>
+		<div class="inventory-cell">
+			<div class="inventory-item aura-devil" data-item-type="aura"></div>
+		</div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+	</div>
+	<div class="inventory-row">
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+	</div>
+</div>
+<input type="button" value="Zapisz zmiany w ekwipunku/wyposazeniu">
+</td>
+<td>
+<b>Postac:</b><br>
+<table>
+<tr>
+<td>
+Bron:
+<div class="inventory-table" data-item-filter-whitelist="weapon">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+</td>
+<td>
+Tarcza:
+<div class="inventory-table" data-item-filter-whitelist="shield">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+</td>
+</tr></table>
+Helm:
+<div class="inventory-table" data-item-filter-whitelist="helm">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+Amulet:
+<div class="inventory-table" data-item-filter-whitelist="amulet">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+Zbroja:
+<div class="inventory-table" data-item-filter-whitelist="armor">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+Rekawice:
+<div class="inventory-table" data-item-filter-whitelist="gloves">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+Buty:
+<div class="inventory-table" data-item-filter-whitelist="boots">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+</td>
+<td>
+<b>Dusza:</b><br>
+Talizman Zywiolu:
+<div class="inventory-table" data-item-filter-whitelist="talizman">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+Aura:
+<div class="inventory-table" data-item-filter-whitelist="aura">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+        </div>
+    </div>
+</div>
+
+
+
+</td></tr><tr>
+<td>
+Skrzynka:
+<div class="inventory-table">
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item shield" data-item-type="shield"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item sword" data-item-type="weapon sword"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item boots" data-item-type="boots"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item sword-fire" data-item-type="weapon sword enchanted"></div>
+        </div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+    </div>
+    <div class="inventory-row">
+        <div class="inventory-cell">
+            <div class="inventory-item helm" data-item-type="helm steel"></div>
+        </div>
+        <div class="inventory-cell">
+            <div class="inventory-item axe-fire" data-item-type="weapon axe enchanted"></div>    
+        </div>
+        <div class="inventory-cell">
+			<div class="inventory-item armor" data-item-type="armor steel"></div>    
+		</div>
+        <div class="inventory-cell">
+            <div class="inventory-item bow-fire" data-item-type="weapon bow enchanted"></div>
+        </div>
+        <div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+    </div>
+	<div class="inventory-row">
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+		<div class="inventory-cell-locked"></div>
+    </div>
+</div>
+<br>
+</td>
+
+</tr><tr>
+<td>
+Enchant:
+<div class="inventory-table" data-item-filter-whitelist="weapon aura talizman" data-item-filter-blacklist="enchanted">
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+	</div>
+</div>
+<div class="inventory-table" data-item-filter-whitelist="stone">
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+	</div>
+	<input type="button" value="Enchantuj">
+</div>
+
+</td>
+<td>
+<b>Otworz Skrzynke:</b><br>
+Skrzynka:
+<div class="inventory-table" data-item-filter-whitelist="box">
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+	</div>
+</div>
+Klucz:
+<div class="inventory-table" data-item-filter-whitelist="key">
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+	</div>
+	<input type="button" value="Otworz">
+</div>
+</td>
+</tr><tr>
+<td>
+Dom Aukcyjny:
+<div class="inventory-table" data-item-filter-blacklist="box aura">
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+	</div>
+	<input type="button" value="Wystaw">
+</div>
+</td>
+<td>
+Sklep:
+<div class="inventory-table">
+    <div class="inventory-row">
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+	</div>
+	<div class="inventory-row">
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+	</div>
+	<div class="inventory-row">
+        <div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+		<div class="inventory-cell"></div>
+	</div>
+	<input type="button" value="Sprzedaj">
+</div></td>
+</tr></table>
+
+<br />
+  
+</body>
+
+</html>
+
